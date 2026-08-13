@@ -12,7 +12,7 @@
 Quick setup for creating public GitHub repos with populated README checklist boards.
 
 **Defaults:**
-- ✅ Repository is **PUBLIC**
+- ✅ Repository is **private**
 - ✅ README is **pre-populated** with 6-phase checklist board
 - ✅ Board is **accessible to all team members**
 
@@ -40,8 +40,8 @@ bash setup-repo-board.sh my-project
 ```bash
 mkdir my-project && cd my-project
 git init
-git config user.email "you@example.com"
-git config user.name "Your Name"
+git config user.email "group36@gmail.com"
+git config user.name "GROUP36"
 ```
 
 ### Step 2: Add Files
@@ -55,8 +55,8 @@ git commit -m "Initial commit: setup project board"
 
 ### Step 4: Push to GitHub
 
-1. **Create repo on GitHub:** https://github.com/new
-   - Name: `my-project`
+1. **Create repo on GitHub:** https://github.com/MakurWai-ajokNyidier/GROUP36
+   - Name: `our-project`
    - **Visibility: PUBLIC** ← Important
    - Don't initialize with README
    - Click Create
@@ -64,7 +64,7 @@ git commit -m "Initial commit: setup project board"
 2. **Connect & push:**
    ```bash
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/my-project.git
+   git remote add origin https://github.com/MakurWai-ajokNyidier/GROUP36.git
    git push -u origin main
    ```
 
@@ -108,9 +108,9 @@ git push
 
 ## Team Access
 
-Once pushed to a **PUBLIC** repo:
+Once pushed to a **private** repo:
 - ✅ Anyone can view the board (no login required)
-- ✅ Team members can clone: `git clone https://github.com/YOUR-USERNAME/my-project.git`
+- ✅ Team members can clone: `git clone https://github.com/MakurWai-ajokNyidier/my-GROUP36.git`
 - ✅ Collaborators can push changes (if added via Settings → Collaborators)
 - ✅ Others can see progress in README checklist
 
