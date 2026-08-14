@@ -1,4 +1,4 @@
-# 🌟 Northstar Retail Co. — Support Deflection MVP
+#  Northstar Retail Co. — Support Deflection MVP
 
 **Group 36 | Power Learn Project | The Northstar Sprint**
 
