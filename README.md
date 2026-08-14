@@ -12,7 +12,7 @@ A 1-week industry simulation to reduce manual ticket handling for Northstar Reta
 |---|---|---|---|
 | Swaleh Rama | Tester / Documentation | +254 791 519 981 | rmswaleh1@students.uonbi.ac.ke |
 | Emmanuel Ukah | AI Prompts / Integration | +234 818 848 8338 | nuelukah@gmail.com |
-| Tracy Wangari | Tester / Audit | — | tracywangari997@gmail.com |
+| Tracy Wangari | Tester / Audit | +254758800011 | tracywangari997@gmail.com |
 | Abraham Makur Mayor Nyidier | Lead Developer / Repo Setup | +211 927 772 704 | makuurmayornyidier@gmail.com |
 | Milkah Michira | Data Engineer / Packaging | +254 729 254 541 | michiramilkah@gmail.com |
 
