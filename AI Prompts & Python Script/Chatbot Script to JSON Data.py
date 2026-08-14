@@ -2,7 +2,7 @@
 import json
 
 # Define a function to load our mock database, setting a default filepath
-def load_database(filepath="mock_data.json"):
+def load_database(filepath="northstar_data.json"):
     # A docstring explaining the purpose of this specific function
     """Reads the JSON database containing order, return, and stock data."""
     
