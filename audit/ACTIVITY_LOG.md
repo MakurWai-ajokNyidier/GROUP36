@@ -9,7 +9,7 @@
 | Date/Time | Task # | Team Member | Commit Message | Board Status | Hours |
 |---|---|---|---|---|---|
 | 13-Aug-2026 09:30 | 7 | Abraham | `feat: initialize repo with README and folder structure - sets up project scaffold for team` | Done | 2.0 |
-| 13-Aug-2026 10:00 | — | Tracy | `docs: populate project task board with 10 granular tasks - assigns owners, priority, and definition of done` | Done | 1.5 |
+| 13-Aug-2026 10:00 | 8 | Tracy | `docs: populate project task board with 10 granular tasks - assigns owners, priority, and definition of done` | Done | 1.5 |
 | 13-Aug-2026 10:15 | 1 | Emmanuel | `feat: draft AI prompts for order status - covers 3 core customer questions` | Done | 2.0 |
 | 13-Aug-2026 11:00 | 2 | Milkah | `data: build fake JSON dataset with 19 records - covers 3 ticket types for chatbot lookup and passes validation` | Done | 3.0 |
 | 13-Aug-2026 12:30 | — | Milkah | `docs: rewrite README with project info - adds team, deliverables, and northstar mvp scope for evaluators` | Done | 1.0 |
