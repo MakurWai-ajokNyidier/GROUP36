@@ -126,47 +126,6 @@ system_prompt = """You are a helpful and friendly AI assistant.
 Engage in natural, engaging conversations. Be concise but informative.
 If asked for advice, provide thoughtful perspectives."""
 ```
-
-## Troubleshooting 🔧
-
-### "APIError: 401"
-- ❌ API key is invalid or missing
-- ✅ Solution: Check your API key at [console.anthropic.com/keys](https://console.anthropic.com/keys)
-- ✅ Verify: `echo $ANTHROPIC_API_KEY` (Linux/Mac)
-
-### "ModuleNotFoundError: No module named 'anthropic'"
-- ❌ anthropic package not installed
-- ✅ Solution: `pip install anthropic`
-
-### "Network error"
-- ❌ No internet connection or API server down
-- ✅ Solution: Check your connection, try again later
-
-### "Rate limited: Too many requests"
-- ❌ Too many requests in a short time
-- ✅ Solution: Wait a few minutes before trying again
-
-### Infinite loop or hanging
-- ❌ Outdated version or corrupted file
-- ✅ Solution: Re-download `chatbot_fixed.py`
-
-## Performance Tips ⚡
-
-1. **Keep conversations shorter** - Limit to ~20 messages for faster responses
-2. **Use Haiku model** - For quick questions: change to `claude-haiku-4-5-20251001`
-3. **Reduce max_tokens** - Set to `512` for faster responses
-4. **Clear history** - Restart the script to reset conversation
-
-## API Costs 💰
-
-Claude API charges per token:
-- **Input:** ~$0.003 per 1K tokens
-- **Output:** ~$0.015 per 1K tokens
-
-A typical conversation uses 500-2000 tokens (costs $0.01-0.05 USD)
-
-Monitor usage at: [console.anthropic.com/usage](https://console.anthropic.com/usage)
-
 ## Example Conversations 💬
 
 ### Example 1: Learning
