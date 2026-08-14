@@ -18,7 +18,7 @@ A 1-week industry simulation to reduce manual ticket handling for Northstar Reta
 
 ---
 
-## 🎯 What This MVP Does
+## What This MVP Does
 
 | Ticket Type | Status | How It Works |
 |---|---|---|
@@ -28,7 +28,7 @@ A 1-week industry simulation to reduce manual ticket handling for Northstar Reta
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
