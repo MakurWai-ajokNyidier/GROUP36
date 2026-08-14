@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot</title>
+<style>
+  :root {
+    --bg: #F4F1EA;
+    --panel: #FFFFFF;
+    --ink: #2B2A28;
+    --muted: #7A776E;
+    --accent: #3C3489;
+    --accent-ink: #FFFFFF;
+    --bubble-user: #E6E2D6;
+    --bubble-bot: #FFFFFF;
+    --border: #DEDACB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
+  .app {
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  #messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .msg.user {
+    align-self: flex-end;
+    background: var(--bubble-user);
+    border-bottom-right-radius: 4px;
+  }
+  .msg.bot {
+    align-self: flex-start;
+    background: var(--bubble-bot);
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 4px;
+  }
+  .msg.error {
+    align-self: flex-start;
+    background: #FAECE7;
+    color: #712B13;
+    border: 1px solid #F0997B;
+  }
+  .msg.typing {
+    align-self: flex-start;
+    color: var(--muted);
+    font-style: italic;
+    border: none;
+    background: transparent;
+    padding-left: 2px;
+  }
+  form#composer {
+    display: flex;
+    gap: 10px;
+    padding: 16px 24px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  #input {
+    flex: 1;
+    resize: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-family: inherit;
+    background: var(--panel);
+    color: var(--ink);
+    max-height: 140px;
+  }
+  #input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  button#send {
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  button#send:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  button#send:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Chatbot</h1>
+    <p>Backed by your own server, which holds the API key securely.</p>
+  </header>
+  <div id="messages"></div>
+  <form id="composer">
+    <textarea id="input" rows="1" placeholder="Type a message..."></textarea>
+    <button id="send" type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  // This front-end never talks to Anthropic directly. It only talks to
+  // your own backend (/api/chat), which holds the API key.
+  let conversationHistory = [];
+
+  const messagesEl = document.getElementById("messages");
+  const composerEl = document.getElementById("composer");
+  const inputEl = document.getElementById("input");
+  const sendBtn = document.getElementById("send");
+
+  function addMessage(role, text) {
+    const div = document.createElement("div");
+    div.className = "msg " + role;
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function addTyping() {
+    const div = document.createElement("div");
+    div.className = "msg typing";
+    div.textContent = "Thinking...";
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  async function callBackend(userText) {
+    conversationHistory.push({ role: "user", content: userText });
+
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: conversationHistory })
+    });
+
+    if (!response.ok) {
+      const errBody = await response.json().catch(() => ({}));
+      throw new Error(errBody.error || ("Request failed with status " + response.status));
+    }
+
+    const data = await response.json();
+    conversationHistory.push({ role: "assistant", content: data.reply });
+    return data.reply;
+  }
+
+  async function handleSend(event) {
+    event.preventDefault();
+    const text = inputEl.value.trim();
+    if (!text) return;
+
+    inputEl.value = "";
+    inputEl.style.height = "auto";
+    sendBtn.disabled = true;
+
+    addMessage("user", text);
+    const typingEl = addTyping();
+
+    try {
+      const reply = await callBackend(text);
+      typingEl.remove();
+      addMessage("bot", reply);
+    } catch (err) {
+      typingEl.remove();
+      addMessage("error", "Something went wrong: " + err.message);
+      conversationHistory.pop();
+    } finally {
+      sendBtn.disabled = false;
+      inputEl.focus();
+    }
+  }
+
+  composerEl.addEventListener("submit", handleSend);
+
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      composerEl.requestSubmit();
+    }
+  });
+
+  inputEl.addEventListener("input", () => {
+    inputEl.style.height = "auto";
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
+  });
+
+  addMessage("bot", "Hi! I'm connected through your backend. Ask me anything.");
+  inputEl.focus();
+</script>
+</body>
+</html>
