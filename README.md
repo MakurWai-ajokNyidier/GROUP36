@@ -1,37 +1,40 @@
-# Team Charter — Group 36
+# Northstar Support Deflection MVP
 
-**Project:** Northstar Retail Co. Support Deflection MVP  
-**Date:** 13-Aug-2026  
-**Team Members:** Swaleh Rama, Emmanuel Ukah, Tracy Wangari, Abraham Makur Mayor Nyidier, Milkah Michira
+**Group 36 — Team Syntatix | Power Learn Project | The Northstar Sprint**
 
----
-
-## 1. Communication
-All daily communications and async updates occur in our dedicated WhatsApp group and Google Meet.
-
-## 2. Deadlines
-Board status moves must happen on the same day the work is performed. Batched end-of-week updates are strictly prohibited.
-
-## 3. Commit Convention
-All edits must follow: `&lt;type&gt;: &lt;what changed&gt; - &lt;why it matters&gt;`
-
-## 4. Escalation Path
-Zero visible activity for 2+ days triggers immediate escalation to the project facilitator.
-
-## 5. Task Constraints (Anti-Black-Box Rule)
-No single task exceeds 4 hours of work.
-
-## 6. Conflict Resolution
-Disagreements resolved via group chat first. If unresolved in 24 hours, facilitator mediates.
+A 1-week industry simulation to reduce manual ticket handling for Northstar Retail Co.'s support team. This MVP covers **Order Status**, **Returns & Refunds**, and **Stock Availability** via an offline Python chatbot that reads directly from a validated JSON dataset.
 
 ---
 
-## ✍️ Signatures
+## 📋 Team
 
-| Name | Signature | Date |
+| Name | Role | Phone | Email |
+|---|---|---|---|
+| Swaleh Rama | Tester / Documentation | +254 791 519 981 | rmswaleh1@students.uonbi.ac.ke |
+| Emmanuel Ukah | AI Prompts / Integration | +234 818 848 8338 | nuelukah@gmail.com |
+| Tracy Wangari | Team Lead / Tester / Audit | — | tracywangari997@gmail.com |
+| Abraham Makur Mayor Nyidier | Lead Developer / Repo Setup | +211 927 772 704 | makuurmayornyidier@gmail.com |
+| Milkah Michira | Data Engineer / Packaging | +254 729 254 541 | michiramilkah@gmail.com |
+
+---
+
+## What This MVP Does
+
+| Ticket Type | Status | How It Works |
 |---|---|---|
-| Swaleh Rama | _________________ | ___/___/2026 |
-| Emmanuel Ukah | _________________ | ___/___/2026 |
-| Tracy Wangari | _________________ | ___/___/2026 |
-| Abraham Makur Mayor Nyidier | _________________ | ___/___/2026 |
-| Milkah Michira | _________________ | ___/___/2026 |
+| **Order Status** | ✅ Live | User enters Order ID → bot returns status, tracking number, carrier, and estimated delivery |
+| **Returns & Refunds** | ✅ Live | User enters Return ID → bot returns refund status, amount, method, and timeline |
+| **Stock Availability** | ✅ Live | User searches by product name → bot returns stock count, price, and restock date |
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.8+
+
+### Run the Chatbot (Offline — No API Keys Needed)
+```bash
+git clone https://github.com/MakurWai-ajokNyidier/GROUP36.git
+cd GROUP36
+python src/chatbot.py
