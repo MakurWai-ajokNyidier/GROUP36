@@ -27,6 +27,9 @@ A 1-week industry simulation to reduce manual ticket handling for Northstar Reta
 | **Stock Availability** | ✅ Live | User searches by product name → bot returns stock count, price, and restock date |
 
 ---
+## Live Prototype
+
+🔗 **[View the Live Chatbot](https://northstar-support-deflection-mvp.onrender.com/)**
 
 ## 🚀 Quick Start
 
