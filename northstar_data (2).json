@@ -1,0 +1,360 @@
+{
+  "company": "Northstar Retail Co.",
+  "data_version": "1.0",
+  "last_updated": "2026-08-13T10:00:00Z",
+  "ticket_types": [
+    "order_status",
+    "returns",
+    "stock_availability"
+  ],
+  "order_status": [
+    {
+      "order_id": "NS-1001",
+      "customer_name": "Amina Osei",
+      "customer_email": "amina.osei@email.com",
+      "order_date": "2026-08-10",
+      "items": [
+        {
+          "product": "Wireless Earbuds Pro",
+          "qty": 1,
+          "price": 89.99
+        },
+        {
+          "product": "USB-C Cable 2m",
+          "qty": 2,
+          "price": 12.5
+        }
+      ],
+      "status": "Shipped",
+      "tracking_number": "TRK-7843291",
+      "carrier": "DHL Express",
+      "ship_date": "2026-08-11",
+      "estimated_delivery": "2026-08-15",
+      "delivery_address": "12 Kilimani Road, Nairobi, Kenya",
+      "total_amount": 114.99
+    },
+    {
+      "order_id": "NS-1002",
+      "customer_name": "James Mwangi",
+      "customer_email": "j.mwangi@email.com",
+      "order_date": "2026-08-12",
+      "items": [
+        {
+          "product": "Running Shoes Size 42",
+          "qty": 1,
+          "price": 120.0
+        }
+      ],
+      "status": "Processing",
+      "tracking_number": null,
+      "carrier": null,
+      "ship_date": null,
+      "estimated_delivery": "2026-08-18",
+      "delivery_address": "45 Westlands Ave, Nairobi, Kenya",
+      "total_amount": 120.0
+    },
+    {
+      "order_id": "NS-1003",
+      "customer_name": "Fatima Bello",
+      "customer_email": "fatima.bello@email.com",
+      "order_date": "2026-08-08",
+      "items": [
+        {
+          "product": "Smart Watch Series 5",
+          "qty": 1,
+          "price": 199.99
+        },
+        {
+          "product": "Screen Protector Pack",
+          "qty": 1,
+          "price": 9.99
+        }
+      ],
+      "status": "Delivered",
+      "tracking_number": "TRK-7843402",
+      "carrier": "FedEx",
+      "ship_date": "2026-08-09",
+      "estimated_delivery": "2026-08-13",
+      "delivery_address": "78 Lavington Green, Nairobi, Kenya",
+      "total_amount": 209.98
+    },
+    {
+      "order_id": "NS-1004",
+      "customer_name": "David Okonkwo",
+      "customer_email": "d.okonkwo@email.com",
+      "order_date": "2026-08-13",
+      "items": [
+        {
+          "product": "Bluetooth Speaker Mini",
+          "qty": 1,
+          "price": 45.0
+        },
+        {
+          "product": "Phone Stand Adjustable",
+          "qty": 1,
+          "price": 15.0
+        },
+        {
+          "product": "LED Desk Lamp",
+          "qty": 1,
+          "price": 32.5
+        }
+      ],
+      "status": "Pending Payment",
+      "tracking_number": null,
+      "carrier": null,
+      "ship_date": null,
+      "estimated_delivery": null,
+      "delivery_address": "23 Parklands Rd, Nairobi, Kenya",
+      "total_amount": 92.5
+    },
+    {
+      "order_id": "NS-1005",
+      "customer_name": "Grace Wanjiku",
+      "customer_email": "grace.w@email.com",
+      "order_date": "2026-08-05",
+      "items": [
+        {
+          "product": "Yoga Mat Premium",
+          "qty": 1,
+          "price": 35.0
+        },
+        {
+          "product": "Resistance Bands Set",
+          "qty": 1,
+          "price": 22.0
+        }
+      ],
+      "status": "Out for Delivery",
+      "tracking_number": "TRK-7843555",
+      "carrier": "DHL Express",
+      "ship_date": "2026-08-12",
+      "estimated_delivery": "2026-08-13",
+      "delivery_address": "9 Riverside Drive, Nairobi, Kenya",
+      "total_amount": 57.0
+    },
+    {
+      "order_id": "NS-1006",
+      "customer_name": "Peter Njoroge",
+      "customer_email": "p.njoroge@email.com",
+      "order_date": "2026-08-01",
+      "items": [
+        {
+          "product": "Laptop Stand Aluminum",
+          "qty": 1,
+          "price": 55.0
+        }
+      ],
+      "status": "Delivered",
+      "tracking_number": "TRK-7843011",
+      "carrier": "G4S Logistics",
+      "ship_date": "2026-08-02",
+      "estimated_delivery": "2026-08-04",
+      "delivery_address": "56 Ngong Rd, Nairobi, Kenya",
+      "total_amount": 55.0
+    }
+  ],
+  "returns": [
+    {
+      "return_id": "RET-2001",
+      "order_id": "NS-1001",
+      "customer_name": "Amina Osei",
+      "customer_email": "amina.osei@email.com",
+      "item_returned": "USB-C Cable 2m",
+      "qty_returned": 1,
+      "reason": "Defective — cable does not charge",
+      "return_status": "Approved",
+      "refund_amount": 12.5,
+      "refund_method": "Original payment method",
+      "request_date": "2026-08-12",
+      "approval_date": "2026-08-13",
+      "pickup_scheduled": "2026-08-14",
+      "refund_processed_date": null,
+      "estimated_refund_date": "2026-08-18",
+      "notes": "Customer provided photo evidence"
+    },
+    {
+      "return_id": "RET-2002",
+      "order_id": "NS-1003",
+      "customer_name": "Fatima Bello",
+      "customer_email": "fatima.bello@email.com",
+      "item_returned": "Smart Watch Series 5",
+      "qty_returned": 1,
+      "reason": "Wrong item — received Series 4 instead",
+      "return_status": "In Transit",
+      "refund_amount": 199.99,
+      "refund_method": "Store credit",
+      "request_date": "2026-08-11",
+      "approval_date": "2026-08-12",
+      "pickup_scheduled": "2026-08-13",
+      "refund_processed_date": null,
+      "estimated_refund_date": "2026-08-20",
+      "notes": "Replacement order NS-1007 created"
+    },
+    {
+      "return_id": "RET-2003",
+      "order_id": "NS-1005",
+      "customer_name": "Grace Wanjiku",
+      "customer_email": "grace.w@email.com",
+      "item_returned": "Resistance Bands Set",
+      "qty_returned": 1,
+      "reason": "Changed mind — no longer needed",
+      "return_status": "Pending Review",
+      "refund_amount": 22.0,
+      "refund_method": "Original payment method",
+      "request_date": "2026-08-13",
+      "approval_date": null,
+      "pickup_scheduled": null,
+      "refund_processed_date": null,
+      "estimated_refund_date": null,
+      "notes": "Within 14-day return window"
+    },
+    {
+      "return_id": "RET-2004",
+      "order_id": "NS-1002",
+      "customer_name": "James Mwangi",
+      "customer_email": "j.mwangi@email.com",
+      "item_returned": "Running Shoes Size 42",
+      "qty_returned": 1,
+      "reason": "Size too small — need size 44",
+      "return_status": "Approved",
+      "refund_amount": 120.0,
+      "refund_method": "Exchange for size 44",
+      "request_date": "2026-08-13",
+      "approval_date": "2026-08-13",
+      "pickup_scheduled": "2026-08-14",
+      "refund_processed_date": null,
+      "estimated_refund_date": null,
+      "notes": "Exchange — new order NS-1008 pending"
+    },
+    {
+      "return_id": "RET-2005",
+      "order_id": "NS-1006",
+      "customer_name": "Peter Njoroge",
+      "customer_email": "p.njoroge@email.com",
+      "item_returned": "Laptop Stand Aluminum",
+      "qty_returned": 1,
+      "reason": "Item arrived damaged — bent frame",
+      "return_status": "Refunded",
+      "refund_amount": 55.0,
+      "refund_method": "Original payment method",
+      "request_date": "2026-08-03",
+      "approval_date": "2026-08-03",
+      "pickup_scheduled": "2026-08-04",
+      "refund_processed_date": "2026-08-06",
+      "estimated_refund_date": null,
+      "notes": "Refund confirmed — customer notified via email"
+    },
+    {
+      "return_id": "RET-2006",
+      "order_id": "NS-1004",
+      "customer_name": "David Okonkwo",
+      "customer_email": "d.okonkwo@email.com",
+      "item_returned": "LED Desk Lamp",
+      "qty_returned": 1,
+      "reason": "Does not match description — wrong color",
+      "return_status": "Pending Review",
+      "refund_amount": 32.5,
+      "refund_method": "Original payment method",
+      "request_date": "2026-08-13",
+      "approval_date": null,
+      "pickup_scheduled": null,
+      "refund_processed_date": null,
+      "estimated_refund_date": null,
+      "notes": "Awaiting warehouse confirmation"
+    }
+  ],
+  "stock_availability": [
+    {
+      "product_id": "PRD-3001",
+      "product_name": "Wireless Earbuds Pro",
+      "category": "Electronics",
+      "size": "One Size",
+      "color": "Black",
+      "in_stock": true,
+      "stock_count": 45,
+      "price": 89.99,
+      "restock_date": null,
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3002",
+      "product_name": "Running Shoes Size 42",
+      "category": "Footwear",
+      "size": "42 EU",
+      "color": "Blue/White",
+      "in_stock": false,
+      "stock_count": 0,
+      "price": 120.0,
+      "restock_date": "2026-08-20",
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3003",
+      "product_name": "Smart Watch Series 5",
+      "category": "Electronics",
+      "size": "One Size",
+      "color": "Silver",
+      "in_stock": true,
+      "stock_count": 12,
+      "price": 199.99,
+      "restock_date": null,
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3004",
+      "product_name": "Running Shoes Size 42",
+      "category": "Footwear",
+      "size": "42 EU",
+      "color": "All Black",
+      "in_stock": true,
+      "stock_count": 8,
+      "price": 120.0,
+      "restock_date": null,
+      "warehouse_location": "Mombasa Branch",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3005",
+      "product_name": "Yoga Mat Premium",
+      "category": "Fitness",
+      "size": "6mm thick",
+      "color": "Purple",
+      "in_stock": true,
+      "stock_count": 23,
+      "price": 35.0,
+      "restock_date": null,
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3006",
+      "product_name": "Bluetooth Speaker Mini",
+      "category": "Electronics",
+      "size": "One Size",
+      "color": "Red",
+      "in_stock": false,
+      "stock_count": 0,
+      "price": 45.0,
+      "restock_date": "2026-08-25",
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    },
+    {
+      "product_id": "PRD-3007",
+      "product_name": "Laptop Stand Aluminum",
+      "category": "Accessories",
+      "size": "15-inch compatible",
+      "color": "Silver",
+      "in_stock": true,
+      "stock_count": 67,
+      "price": 55.0,
+      "restock_date": null,
+      "warehouse_location": "Nairobi Central",
+      "last_updated": "2026-08-13T08:00:00Z"
+    }
+  ]
+}
