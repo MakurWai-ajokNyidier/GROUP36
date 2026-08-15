@@ -6,7 +6,8 @@
 - **Expected:** The system confirms that the product is available and shows the available quantity.
 - **Actual:** The system correctly identified Yoga Mat Premium (6mm thick, Purple) as in stock, with 23 units available at Nairobi Central, and displayed the price as $35.0.
 - **Result:** PASS
-- **Evidence:**
+- **Evidence:** [Test 1 Screenshot](../screenshots/stock-availability/test-01-product-in-stock.png)
+
 
 ## Test 2: Product Out of Stock
 
@@ -14,7 +15,7 @@
 - **Expected:** The system clearly informs the user that the product is out of stock.
 - **Actual:** The system correctly identified Running Shoes Size 42 (42 EU, Blue/White) as out of stock and provided the expected restock date of 2026-08-20.
 - **Result:** PASS
-- **Evidence:**
+- **Evidence:** [Test 2 Screenshot](../screenshots/stock-availability/test-02-product-out-of-stock.png)
 
 ## Test 3: Invalid Product
 
@@ -22,7 +23,7 @@
 - **Expected:** The system gives a clear message that the product could not be found.
 - **Actual:** The system did not identify Galaxy Flying Shoes as an invalid or unavailable product. Instead, it asked the user to select a recognized item, providing examples such as Wireless Earbuds Pro, Running Shoes, and Yoga Mat.
 - **Result:** FAIL
-- **Evidence:**
+- **Evidence:** [Test 3 Screenshot](../screenshots/stock-availability/test-03-invalid-product.png)
 
 ## Test 4: Empty Product Input
 
@@ -30,7 +31,8 @@
 - **Expected:** The system asks the user to enter a product name or product ID.
 - **Actual:** The Send button did not respond when the product input was left empty, preventing the user from submitting an empty product request.
 - **Result:** FAIL
-- **Evidence:**
+- **Evidence:** [Test 4 Screenshot](../screenshots/stock-availability/test-04-empty-product-input.png)
+
 
 ## Test 5: Different Product Search
 
@@ -38,4 +40,4 @@
 - **Expected:** The system returns the correct stock availability for the selected product.
 - **Actual:** The system correctly identified Laptop Stand Aluminum (15-inch compatible, Silver) as in stock, with 67 units available at Nairobi Central, and displayed the price as $55.0.
 - **Result:** PASS
-- **Evidence:**
+- **Evidence:** [Test 5 Screenshot](../screenshots/stock-availability/test-05-different-product-search.png)
